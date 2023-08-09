@@ -1,0 +1,15 @@
+{
+  "name": "koo",
+  "version": "1.0.0",
+  "description": "sass",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass-stylesheet/style.scss css-stylesheet/style.css",
+    "comp:sass": "node-sass sass-stylesheet/single_style.scss css/stylesheet/single_style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

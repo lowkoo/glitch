@@ -1,0 +1,17 @@
+@import 'functions';
+
+body{
+    background-color: $home-background;
+    font-family: $font;
+}
+.message_area{
+    width: 100%;
+}
+.signup_overall_wrapper{
+    width: 100%;
+    form{
+        width: 80%;
+        margin: 20px auto;
+        background-color: #00000077;
+    }
+}

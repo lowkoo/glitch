@@ -1,0 +1,231 @@
+/* @import 'style.css'; */
+:root {
+  --clr-primary-400: 263 55% 52%;
+  --clr-secondary-400: 217 19% 35%;
+  --clr-secondary-500: 219 29% 14%;
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-200: 210 46% 95%;
+  --clr-neutral-300: 0 0% 81%;
+
+  --ff-primary: "Courier New", Courier, monospace;
+
+  --fw-400: 500;
+  --fw-700: 600;
+  --fs-450: 500;
+  --fs-300: 0.6875rem;
+  --fs-400: 0.8125rem;
+  --fs-500: 1.25rem;
+  --fs-800: 3.4em;
+
+  --font-color: #fff;
+}
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* general styling*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+body{
+  background: linear-gradient(rgba(8, 1, 1, 0.862), rgba(45, 44, 44, 0.95));
+  /* background: #000; */
+  font-family: var(--ff-primary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.paragraph{
+  text-align: center;
+  padding: 5px;
+
+}
+.profile_picture a img{
+  width: 30px;
+  /* height: 25px; */
+  border-radius: 100px;
+}
+.paragraph a{
+  color: #0ff;
+  text-decoration: none;  
+}
+.paragraph a:hover{
+  color: #00f;
+ 
+}
+.times{
+  width: 100%;
+  padding: 20px;
+  
+}
+.times a{
+  color: var(--font-color); 
+  text-decoration: none;
+  font-size: var(--fs-800);
+  filter: brightness(60%);
+}
+
+.message_area{
+  text-align: center;
+  color: #e30a0a;
+  margin: 100px auto;
+}
+.profile_name{
+  color: #fff;
+  padding: 5px;
+  font-size: var(--fs-500);
+}
+.profile_picture a img{
+  width: 30px;
+  /* height: 25px; */
+  border-radius: 100px;
+}
+.profile_name{
+  color: #fff;
+  padding: 5px;
+  font-size: var(--fs-500);
+}
+/*signup page style*/
+.signup_overall_wrapper{
+  /* width: min(200px, 30%); */
+  width: 50%;
+  margin: 100px auto;
+  background: linear-gradient(rgba(1, 2, 3, 0.3), rgba(0, 0, 0, 0.622));
+  height: ;
+  color: #fff;
+  border-radius: 7px;
+  box-shadow: 1px 4px 10px #040c0d;
+}
+
+input{
+  width: 100%;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 7px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  outline: none;
+  padding: 9px;
+  margin: 5px;
+  font-weight: bold;
+  font: var(--fs-500);
+  filter: brightness(70%);
+
+}
+input:hover{
+  filter: brightness(100%);
+}
+input[type=submit]{
+  width: 100px;
+  padding: 10px;
+  margin: 20px 30px;
+  color: #fff;
+  background-color: #0ff;
+  color: #000;
+  border-radius: 50px;
+  border: none;
+  font-weight: var(--fw-700);
+  font-size: var(--fs-500);
+  filter: brightness(50%);
+  /* filter: contrast(30%); */
+  filter: drop-shadow();
+  cursor: pointer;
+
+}
+input[type=submit]:hover, .times a:hover{
+  filter: brightness(100%);
+}
+input[type=file]{
+  border: none;
+}
+input[type=file]::file-selector-button {
+  /* border: 2px solid #6c5ce7; */
+  padding: .2em .4em;
+  border-radius: 2em;
+  background-color: #a29bfe;
+  /* transition: 1s; */
+}
+
+input[type=file]::file-selector-button:hover {
+  filter: brightness(100%);
+}
+form{
+  width: 100%;
+  padding: 10px;
+}
+label{
+  color: var(--font-color);
+  padding: 10px;
+  /* text-decoration: line-through; */
+}
+/* login page style*/
+.overall_login_form, .overall_email_verification, .overall_passname_form{
+  width: 50%;
+  margin: 200px auto;
+  color: #fff;
+  background: transparent;
+  box-shadow: 1px 4px 10px #040c0d;
+}
+/* post page style*/
+.post_overall_wrapper{
+  background: #202022;
+  color: hsl(var(--clr-neutral-100));
+  width: 50%;
+  margin: 100px auto;
+  background: transparent;
+}
+/*passname page style*/
+.overall_passname_form .password_visiblity{
+  position: relative;
+}
+.overall_passname_form .password_visiblity img{
+  /* position: absolute; */
+  top: 0;
+  left: -10;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  
+}
+/*message page style*/
+.overall_message_page{
+  /* background: #fff; */
+  background-attachment: local;
+  background-size: cover;
+  width: 80%;
+  margin: 100px auto;
+}
+/* media query*/
+@media screen and (max-width: 40em){
+  .overall_login_form{
+    width: 100%;
+    background: transparent;
+  }
+  .signup_overall_wrapper{
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    box-shadow: none;
+
+  }
+  .post_overall_wrapper, .overall_passname_form{
+    width: 100%;
+    box-shadow: none;
+  }
+  /* .overall_email_verification{} */
+}

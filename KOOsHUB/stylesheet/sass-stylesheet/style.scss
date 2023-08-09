@@ -1,0 +1,111 @@
+@import 'functions';
+
+body{
+    @include background-reset;
+    background-image: $home-background;
+}
+.header_overall_wrapper{
+    width: 100%;
+    display: $flex_display;
+    height: 10vh;
+    @include background-reset;
+    background-color: $header_background;
+    ul{
+        width: 80%;
+        display: $flex_display;
+        padding: 10px;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+
+        li{
+            list-style: none;
+
+            ul{
+                display: none;
+                position: absolute;
+            }
+            a{
+                padding: 20px;
+                margin: 8px;
+                color: $text_color;
+                font-weight: 900;
+                text-transform: uppercase;
+                transition: .3s;
+                text-decoration: solid;
+                border-radius: 50px;
+                &:hover{
+                    background-color: $header_list_background_color;
+                    & > ul{
+                        display: block;
+                        position: fixed;
+                        top: 20px;
+                    }
+                    
+                }
+
+            }
+        }
+    }
+}
+.homepage_overall_wrapper{
+    padding-top: 10vh;
+    width: 80%;
+    ul{
+        width: 100%;
+        padding: 10px;
+        @include flex_display;
+        .homepage_profile_wrapper{
+            display: grid;
+            width: 80%;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: rgb(175, 165, 165);
+            padding: 20px;
+            // .homepage_inner_wrapper{
+                // display: grid;
+                div{
+                    // list-style: none;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+
+                    a{
+                        text-decoration: none;
+                        color: $text_color;
+                        font: {
+                            weight: bolder;
+                            size: 10px; 
+                        }
+                    }
+                    h4{
+                        color: $text_color;
+
+                    }
+                    .homepage_ppics_wrapper{
+                        margin-left: -30px;
+                        img{
+                            width: $profile_picture_width;
+                            height: $profile_picture_width;
+                            border-radius: 50px;
+                            
+                        } 
+                    }
+                    .homepage_post_pics_wrapper{
+                        img{
+                            width: $img_width;
+                            border-radius: 4px;
+                        }
+                    }
+                    p{
+                        padding: 5px;
+                        font: 10px;
+                    }
+                    small{
+                        color: $text_color;
+                        padding: 5px;
+                        
+                    }
+                }
+            // }
+        }
+    }
+}

@@ -1,0 +1,361 @@
+:root {
+  --clr-primary-400: 263 55% 52%;
+  --clr-secondary-400: 217 19% 35%;
+  --clr-secondary-500: 219 29% 14%;
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-200: 210 46% 95%;
+  --clr-neutral-300: 0 0% 81%;
+  --clr-dark: 10% 0 0.9;
+
+  --ff-primary: "Barlow Semi Condensed", sans-serif;
+
+  --fw-400: 500;
+  --fw-700: 600;
+
+  --fs-300: 0.6875rem;
+  --fs-400: 0.8125rem;
+  --fs-500: 1.25rem;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../images/IMG_7820.JPG); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background: #000; 
+  /* pointer-events: none; */
+  color: #fff;
+}
+#full_image{
+  display: none;
+  position: fixed;
+  inset: 0;
+  left: 0;
+  /* padding: 20px; */
+  text-align: center;
+  aspect-ratio: 1;
+  width: 100%;
+  height: 100%; 
+  background: linear-gradient(rgb(47, 46, 46), rgba(0, 0, 0, 1));
+  opacity: 1;
+  z-index: 1;
+
+}
+#close_btn{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  font-size: 30px;
+  padding: 20px 0px 0px 20px;
+}
+/* .ring{
+  width: 200px;
+  height: 200px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  position: absolute;
+}
+.ring:nth-child(1){
+  border-bottom-width: 8px;
+  border-color: rgb(34, 255, 255);
+  animation: rotate1 2s linear infinite;
+} */
+#fullimage{
+  /* padding: 24px; */
+  width: fit-content;
+  height: 100dvh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  text-align: center;
+  z-index: 1;
+  
+}
+.homepage_profile_picture{
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+
+}
+.profile_picture a img{
+  width: 30px;
+  /* height: 25px; */
+  border-radius: 100px;
+}
+.homepage_overall_wrapper .homepage_profile_wrapper {
+padding: 5px;
+font: 10px; } 
+.paragraph{
+  color: #fff;
+  font-size: var(--fs-400);
+  line-height: 1.5;
+}
+/* #profile_picture{
+  border-radius: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+} */
+.title{
+  font-size: var(--fs-500);
+  text-transform: uppercase;
+  color: aliceblue;
+}
+.message_link{
+  background: #00f;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.5;
+}
+.profile_name{
+  color: #fff;
+  padding: 5px;
+  font-size: var(--fs-500);
+}
+.menu{
+  display: none;
+
+}
+
+.header_overall_wrapper{
+  width: 100%;
+  display: flex;
+  height: 10vh;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #141414; }
+.header_overall_wrapper ul {
+  width: 80%;
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center; }
+.header_overall_wrapper ul li {
+  /* position: relative; */
+  list-style: none; 
+}
+.header_overall_wrapper ul li ul {
+  display: none;
+  /* position: absolute;  */
+}
+.header_overall_wrapper ul li a {
+  padding: 20px;
+  margin: 8px;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: .3s;
+  text-decoration: solid;
+  border-radius: 50px; }
+.header_overall_wrapper ul li a:hover {
+  background-color: #0ff; }
+.header_overall_wrapper ul li:hover > .sub-profile {
+  /* display: block; */
+  width: 100%;
+  padding: 8px;
+  /* position: relative; */
+  top: 20px; 
+}
+.homepage_overall_wrapper {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+   }
+.homepage_overall_wrapper .homepage_profile_wrapper {
+  margin: auto;
+  width: min(90%, 70rem);
+  /* padding: 20px; */
+ }
+.homepage_overall_wrapper .homepage_profile_wrapper .homepage_inner_wrapper {
+  display: grid;
+  background: lch(var(--clr-dark));
+  width: min(95%, 70rem);
+  gap: 1.5rem;
+  grid-template-areas: 
+  'one two four'
+  'three three four'
+  'three three five'
+  ;
+  grid-auto-columns: 1fr;
+  padding-block: 2rem;
+  margin-inline: auto;
+  padding: 10px;
+  border-bottom: 1px #fff solid;
+  }
+  .homepage_overall_wrapper .homepage_profile_wrapper .homepage_inner_wrapper_2{
+    display: grid;
+    width: min(95%, 70rem);
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one one two'
+    'one one three';
+    margin-inline: auto;
+    border-bottom: 0.1rem #fff solid;
+    
+    }
+  .homepage_profile:first-child{
+    grid-area: one;
+    padding: 5px;        
+  }
+  .homepage_profile:nth-child(2){
+    grid-area: two;
+  }
+  .homepage_profile:nth-child(3){
+    grid-area: three;        
+  } 
+  .homepage_profile:nth-child(4){
+    grid-area: four;
+  }
+  .homepage_profile:last-child{
+    grid-area: five;        
+  }
+  .homepage_profile_2:first-child{
+    grid-area: one;
+    /* padding: 5px;         */
+  }
+  .homepage_profile_2:nth-child(2){
+    grid-area: two;
+  }
+  .homepage_profile_2:last-child{
+    grid-area: three; 
+  }
+  .homepage_profile, .homepage_profile_2{
+    display: grid;          
+    font-size: var(--fs-400);
+    padding: 10px;
+    /* background: transparent; */
+    border-radius: 0.5em;
+    /* box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.2);           */
+  }
+    .homepage_post_picture_wrapper {
+    /* width: ; */
+    /* height: 200px; */
+    margin: 1px auto;
+    position: relative;
+    background: rgb(34, 32, 32);
+    background-position: center;
+    backface-visibility: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 4px; }
+    .homepage_post_picture_wrapper img{
+      /* position: sticky; */
+      max-width: 298px;
+      max-height: 224px;
+      object-fit: cover;
+      filter: brightness(90%);
+      /* width: 200px; */
+      
+    }
+    .homepage_post_picture_wrapper img:hover{
+      cursor: pointer;
+      filter: brightness(110%);
+    }
+    .homepage_overall_wrapper .homepage_profile_wrapper .homepage_inner_wrapper .homepage_profile a{
+      border-radius: 50px;
+      width: 100px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    small{
+      color: #0ff;
+    }
+    @media screen and (max-width: 50em) {
+      .homepage_overall_wrapper .homepage_profile_wrapper .homepage_inner_wrapper{
+        grid-template-areas: 
+        'one one two'
+        'four four four'
+        'three three three'
+        'five five five'
+        ;
+
+      }
+      .homepage_overall_wrapper .homepage_profile_wrapper .homepage_inner_wrapper_2{
+        grid-template-areas: 
+        'two two two'
+        'one one three'
+        ;
+      }
+      .menu{
+        display: flex;
+        padding: 10px;
+
+      }
+      .menu button img{
+        background: lch(50% 0.8 80);
+        padding: 0;
+        
+      }
+      .menu img:hover{
+        cursor: pointer;
+      }
+      .header_overall_wrapper{
+        /* display: block; */
+        width: 100%;
+        background: lch(var(--clr-dark));
+        border-bottom: 1px solid #fff;
+      }
+      .header_overall_wrapper ul li a{
+        /* border-bottom: 2px solid #fff; */
+        
+        /* margin: 0; */
+      }
+      .settings_overall_wrapper{
+        display: none;
+      }
+      .menu button ~ .header_overall_wrapper{
+        right: 0;
+        display: block;
+      }
+      .settings_overall_wrapper{
+        display: none;
+      }
+      #fullimage{
+        /* padding: 24px; */
+        width:80%;
+        /* padding: 20px; */
+        /* height: 100%; */
+        max-height: fit-content;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object-fit: cover;
+        text-align: center;
+        
+      }
+      .homepage_overall_wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+         }
+      .homepage_overall_wrapper .homepage_profile_wrapper, .homepage_overall_wrapper .homepage_profile_wrapper .homepage_inner_wrapper{
+        width: 100%;
+        padding: 10;
+        margin: 0;
+      }
+    }
+  
+

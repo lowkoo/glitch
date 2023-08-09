@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="video_wrap">
+        <video id="vid" playsinline autoplay></video>
+    </div>
+
+    <div class="controller">
+        <button type="submit" id="capture">capture</button>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="error"></div>
+
+</body>
+</html>
+<script>
+    // 'use strict';
+    const video = document.getElementById('vid');
+    const cap = document.getElementById('capture');
+    const canvas = document.getElementById('canvas');
+    const error = document.getElementById('error');
+
+    const constraints = {
+        audio: {noiseSuppression: true, echoCancellation: true},
+        video : {
+            width: {
+                min: 100,
+                max: 1280
+            },
+            height: {
+                min: 100,
+                max: 720
+            }
+        }
+    };
+
+    async function init(){
+        try{
+            const stream = await navigator.mediaDevices.getUserMedia(constraints);
+            handleSuccess(stream);
+        }
+        catch(e){
+            error.innerHTML = `navigator.getUserMedia.error:${e.toString()}`;
+        }
+    }
+function handleSuccess(stream){
+    window.stream = stream;
+    video.srcObject = stream;
+
+}
+
+// init();
+
+var content = canvas.getContext('2d');
+cap.addEventListener("click", function(){
+    content.drawImage(video, 0, 0, 100, 100);
+})
+</script>

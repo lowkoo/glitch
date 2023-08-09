@@ -1,0 +1,11 @@
+$color: #ff0;
+$font: sans-serif;
+body {
+    $font: arial !global;
+    background-color: $color;
+    font-family: $font;
+}
+// font-family, font-size can be wriiten as below instead of the prefix multiple times
+font: {
+    family: d;
+}

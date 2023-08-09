@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@mixin background-reset{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+@mixin flex_display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+$home-background: linear-gradient(rgba(0, 0, 0, 0.694), rgba(0, 0, 0, 0.5));
+$header_background: #000;
+$text_color: #fff;
+$header_list_background_color: rgb(217, 114, 40);
+$flex_display: flex;
+$block_display: block;
+$font: Arial, Helvetica, sans-serif;
+$img_width: 200px;
+$profile_picture_width: 30px;

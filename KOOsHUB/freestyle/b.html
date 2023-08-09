@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.scss">
+</head>
+<style>
+    body{
+        background-color: aquamarine;
+        
+    }
+    div:not([class]){
+        outline: 1.4px solid black;
+        padding: 0.5rem;
+    }
+    .flex_box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .flex_box > *{
+        flex-grow: 1;
+        flex: 1;
+        flex-basis: 33%;
+    }
+
+    .grid_box{
+        display: grid;
+        /* grid-auto-flow: column; */
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* repeat(auto-fit, minmax(200px,1fr)) */
+    }
+
+
+</style>
+<body>
+        
+    <h2>Flex</h2>
+        <div class="flex_box">
+        <div>Lorem ipsum dolor</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>rem, ipsum.</div>
+        <div>Lorem, ipsum.</div>
+        <div>Lorem </div>
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem, ipsum dolor.</div>
+        </div>
+
+    <h2>Grid Lorem ipsum dolor sit amet consectetur adipisicing elit. Non tenetur deleniti vitae, in tempore minus reiciendis odio omnis cumque soluta numquam aspernatur nesciunt, distinctio debitis excepturi esse. Repudiandae, officiis odit.</h2>
+    
+
+        <div class="grid_box">
+
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem, ipsum dolor.</div>
+        <div>Lorem, ipsum dolor.</div>
+        </div>
+        <!-- ACC4D0C39E85D5D27F6C52170EADEF51D487DF69F807D089A60D82DE21096A1A -->
+        <!-- 03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4 -->
+</table>
+
+</body>
+</html>
